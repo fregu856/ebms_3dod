@@ -1,6 +1,6 @@
 # ebms_3dod
 
-![overview image](ebms_3dod.pdf)
+![overview image](ebms_3dod.jpg)
 
 Official implementation (PyTorch) of the paper: \
 **Evaluating Scalable Bayesian Deep Learning Methods for Robust Computer Vision**, CVPR Workshops 2020 [[arXiv]](https://arxiv.org/abs/1906.01620) [[project]](http://www.fregu856.com/publication/evaluating_bdl/). \
