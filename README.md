@@ -12,7 +12,12 @@ _We apply energy-based models p(y|x; theta) to the task of 3D bounding box regre
 
 If you find this work useful, please consider citing:
 ```
-TODO!
+@article{gustafsson2020accurate,
+  title={Accurate 3D Object Detection using Energy-Based Models},
+  author={Gustafsson, Fredrik K and Danelljan, Martin and Sch{\"o}n, Thomas B},
+  journal={arXiv preprint arXiv:2012.04634},
+  year={2020}
+}
 ```
 
 
