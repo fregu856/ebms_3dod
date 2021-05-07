@@ -12,11 +12,11 @@ _We apply energy-based models p(y|x; theta) to the task of 3D bounding box regre
 
 If you find this work useful, please consider citing:
 ```
-@article{gustafsson2020accurate,
+@inproceedings{gustafsson2020accurate,
   title={Accurate 3D Object Detection using Energy-Based Models},
   author={Gustafsson, Fredrik K and Danelljan, Martin and Sch{\"o}n, Thomas B},
-  journal={arXiv preprint arXiv:2012.04634},
-  year={2020}
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
+  year={2021}
 }
 ```
 
