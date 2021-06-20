@@ -29,7 +29,8 @@ If you find this work useful, please consider citing:
 
 
 ## Acknowledgements
-TODO!
+
+- The code is based on [SA-SSD](https://github.com/skyhehe123/SA-SSD) by [@skyhehe123](https://github.com/skyhehe123).
 
 
 
