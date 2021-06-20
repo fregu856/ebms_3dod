@@ -84,8 +84,6 @@ def main():
 
     if cfg.SA_SSD_pretrained:
         load_params_from_file(model, "/root/project4/3dod/epoch_50.pth")
-    elif cfg.SA_SSD_pretrained2:
-        load_params_from_file2(model, "/root/project4/3dod/saved_model_vehicle2/checkpoint_epoch_80.pth")
 
     train_dataset = get_dataset(cfg.data.train)
 
