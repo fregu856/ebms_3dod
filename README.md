@@ -42,7 +42,7 @@ If you find this work useful, please consider citing:
 
 ## Index
 TODO!
-
+- [Usage](#usage)
 - [Pretrained model](#pretrained-model)
 ***
 ***
@@ -140,104 +140,101 @@ This repository is a work in progress, the code is currently being uploaded (Jun
 ***
 
 
-- NOte that I had to use exactly the same versions for pytorch (1.1.0) and spconv (1.0) as in https://github.com/skyhehe123/SA-SSD for the code to work.
+
+
+
+
+
+
+
+
+***
+***
+***
+## Usage
+
+The code has been tested on Ubuntu 16.04. Note that I had to use exactly the same versions for pytorch (1.1.0) and spconv (1.0) as in https://github.com/skyhehe123/SA-SSD for the code to work.
 *
-*
-*
-*
-*
-- $ pip install opencv-python
-- $ pip install Shapely
-- $ pip install mmcv==0.2.14 (NOTE! It did not work with the latest version)
-- $ pip install terminaltables
-- $ apt-get update
-- $ apt-get install -y libsm6 libxext6 libxrender-dev
-- $ pip install opencv-python
-- $ pip install torch==1.1.0 torchvision==0.3.0 (NOTE! pytorch 1.1.0)
-- $ pip install numba
-- $ pip install Cython
-- $ pip install pycocotools
-- $ pip install scikit-image
-*
-*
-- Install spconv 1.0 (NOTE! spconv 1.0):
-- - $ cd ebms_3dod/3dod
-- - $ git clone https://github.com/traveller59/spconv.git --recursive
-- - $ cd spconv
-- - $ git checkout 8da6f967fb9a054d8870c3515b1b44eca2103634 (this is the commit corresponding to spconv 1.0)
-- - $ apt-get update
-- - $ apt-get install libboost-all-dev
-- - $ python setup.py bdist_wheel
-- - $ cd dist
-- - $ pip install spconv-1.0-cp36-cp36m-linux_x86_64.whl (spconv-1.0-cp36-cp36m-linux_x86_64.whl was the name of the file at least for me)
-*
-*
-- $ cd ebms_3dod/3dod
-- $ pip install pybind11
-- $ cd mmdet/ops/points_op
-- $ python setup.py build_ext --inplace
-- $ cd mmdet/ops/pointnet2
-- $ python setup.py build_ext --inplace
-- $ cd mmdet/ops/iou3d
-- $ python setup.py build_ext --inplace
-*
+- Installation:
+```
+$ pip install opencv-python
+$ pip install Shapely
+$ pip install mmcv==0.2.14 (NOTE! It did not work with the latest version)
+$ pip install terminaltables
+$ apt-get update
+$ apt-get install -y libsm6 libxext6 libxrender-dev
+$ pip install opencv-python
+$ pip install torch==1.1.0 torchvision==0.3.0 (NOTE! pytorch 1.1.0)
+$ pip install numba
+$ pip install Cython
+$ pip install pycocotools
+$ pip install scikit-image
+```
+- - Install spconv 1.0 (NOTE! spconv 1.0):
+```
+$ cd ebms_3dod/3dod
+$ git clone https://github.com/traveller59/spconv.git --recursive
+$ cd spconv
+$ git checkout 8da6f967fb9a054d8870c3515b1b44eca2103634 (this is the commit corresponding to spconv 1.0)
+$ apt-get update
+$ apt-get install libboost-all-dev
+$ python setup.py bdist_wheel
+$ cd dist
+$ pip install spconv-1.0-cp36-cp36m-linux_x86_64.whl (spconv-1.0-cp36-cp36m-linux_x86_64.whl was the name of the file at least for me)
+```
+```
+$ cd ebms_3dod/3dod
+$ pip install pybind11
+$ cd mmdet/ops/points_op
+$ python setup.py build_ext --inplace
+$ cd mmdet/ops/pointnet2
+$ python setup.py build_ext --inplace
+$ cd mmdet/ops/iou3d
+$ python setup.py build_ext --inplace
+```
 *
 - Download the pretrained SA-SSD model from https://drive.google.com/file/d/1WJnJDMOeNKszdZH3P077wKXcoty7XOUb/view, place the file epoch_50.pth in ebms_3dod/3dod.
-*
 *
 - Create the folders ebms_3dod/3dod/data and ebms_3dod/3dod/data/KITTI
 - Download the KITTI dataset, place the "ImageSets" and "object" folders in ebms_3dod/3dod/data/KITTI
 *
-*
 - Create cropped point clouds and sample for data augmentation:
 - - Create the folder ebms_3dod/3dod/data/KITTI/object/training/velodyne_reduced
 - - Create the folder ebms_3dod/3dod/data/KITTI/object/testing/velodyne_reduced
-- - $ cd ebms_3dod/3dod
-- - $ python create_data.py
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-*
+```
+$ cd ebms_3dod/3dod
+$ python create_data.py
+```
 *
 *
 *
 *
 - Train model on KITTI train:
-- - $ cd ebms_3dod/3dod
-- - $ python train.py configs/car_cfg20.py
-
+```
+$ cd ebms_3dod/3dod
+$ python train.py configs/car_cfg20.py
+```
+*
 - Evaluate model on KITTI val:
-- - $ cd ebms_3dod/3dod
-- - $ python eval.py configs/car_cfg20_eval_ebm3.py saved_model_vehicle20/checkpoint_epoch_80.pth
-
+```
+$ cd ebms_3dod/3dod
+$ python eval.py configs/car_cfg20_eval_ebm3.py saved_model_vehicle20/checkpoint_epoch_80.pth
+```
+*
 - Run model on KITTI test:
-- - $ cd ebms_3dod/3dod
-- - $ python eval.py configs/car_cfg20_eval_ebm3_test.py saved_model_vehicle20/checkpoint_epoch_80.pth --out saved_model_vehicle20 (this creates 000000.txt - 007517.txt in ebms_3dod/3dod/saved_model_vehicle20)
+```
+$ cd ebms_3dod/3dod
+$ python eval.py configs/car_cfg20_eval_ebm3_test.py saved_model_vehicle20/checkpoint_epoch_80.pth --out saved_model_vehicle20 (this creates 000000.txt - 007517.txt in ebms_3dod/3dod/saved_model_vehicle20)
+```
 - - To evaluate on KITTI test:
 - - Download all 7518 files, mark all files and compress to a zip file
 - - Upload the zip file to the KITTI evaluation server
+
+
+
+
+
+
 
 
 
