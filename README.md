@@ -141,8 +141,8 @@ $ python setup.py build_ext --inplace
 - - $ cd ebms_3dod/3dod
 - - $ python eval.py configs/car_cfg20_eval_ebm3_test.py saved_model_vehicle20/checkpoint_epoch_80.pth --out saved_model_vehicle20 _(this creates 000000.txt - 007517.txt in ebms_3dod/3dod/saved_model_vehicle20)_
 - - To evaluate on KITTI test:
-- - Download all 7518 files, mark all files and compress to a zip file
-- - Upload the zip file to the KITTI evaluation server
+- - - Download all 7518 files, mark all files and compress to a zip file.
+- - - Upload the zip file to the KITTI evaluation server.
 ***
 ***
 ***
@@ -266,9 +266,10 @@ aos  AP:99.32, 95.89, 93.25
 - - Download the file checkpoint_epoch_80.pth from above and place in ebms_3dod/3dod/pretrained.
 - - $ cd ebms_3dod/3dod
 - - $ python eval.py configs/car_cfg20_eval_ebm3_test.py pretrained/checkpoint_epoch_80.pth --out pretrained _(this creates 000000.txt - 007517.txt in ebms_3dod/3dod/pretrained)_
-- - Download all 7518 files, mark all files and compress to a zip file
-- - Upload the zip file to the KITTI evaluation server
-- - Expexted output:
+- - To evaluate on KITTI test:
+- - - Download all 7518 files, mark all files and compress to a zip file.
+- - - Upload the zip file to the KITTI evaluation server.
+- - - Expexted output:
 ```
 Benchmark	        Easy	Moderate	Hard
 Car (Detection)	        96.81 %	93.54 %	88.33 %
