@@ -243,6 +243,8 @@ $ python eval.py configs/car_cfg20_eval_ebm3_test.py saved_model_vehicle20/check
 ***
 ***
 ***
+***
+***
 ## Pretrained model
 
 - Model trained on KITTI train ($ python train.py configs/car_cfg20.py): https://drive.google.com/file/d/1hWKUZ4rx9h6Med3pI4A4wbHXEOey-8zI/view?usp=sharing
