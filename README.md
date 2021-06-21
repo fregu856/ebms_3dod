@@ -42,6 +42,8 @@ If you find this work useful, please consider citing:
 
 ## Index
 TODO!
+
+- [Pretrained model](#pretrained-model)
 ***
 ***
 ***
