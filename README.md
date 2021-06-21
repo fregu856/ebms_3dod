@@ -240,6 +240,10 @@ $ python setup.py build_ext --inplace
 ***
 ## Documentation
 
+- __3dod/mmdet/models/detectors/single_stage.py__: Code for defining the EBM network branch f_\theta(x, y), the EBM loss and the gradient-based prediction procedure.
+
+- __3dod/viz_video.py__: Code for creating the [Youtube video](https://youtu.be/7JP6V818bh0) with qualitative results.
+
 
 ***
 ***
