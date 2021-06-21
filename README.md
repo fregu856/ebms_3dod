@@ -117,12 +117,12 @@ $ python setup.py build_ext --inplace
 *
 - Download the pretrained SA-SSD model from https://drive.google.com/file/d/1WJnJDMOeNKszdZH3P077wKXcoty7XOUb/view, place the file epoch_50.pth in ebms_3dod/3dod.
 *
-- Create the folders ebms_3dod/3dod/data and ebms_3dod/3dod/data/KITTI
-- Download the KITTI dataset, place the "ImageSets" and "object" folders in ebms_3dod/3dod/data/KITTI
+- Create the folders ebms_3dod/3dod/data and ebms_3dod/3dod/data/KITTI.
+- Download the KITTI dataset, place the "ImageSets" and "object" folders in ebms_3dod/3dod/data/KITTI.
 *
 - Create cropped point clouds and sample for data augmentation:
-- - Create the folder ebms_3dod/3dod/data/KITTI/object/training/velodyne_reduced
-- - Create the folder ebms_3dod/3dod/data/KITTI/object/testing/velodyne_reduced
+- - Create the folder ebms_3dod/3dod/data/KITTI/object/training/velodyne_reduced.
+- - Create the folder ebms_3dod/3dod/data/KITTI/object/testing/velodyne_reduced.
 - - $ cd ebms_3dod/3dod
 - - $ python create_data.py
 *
