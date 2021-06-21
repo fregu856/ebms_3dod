@@ -154,7 +154,7 @@ This repository is a work in progress, the code is currently being uploaded (Jun
 ## Usage
 
 The code has been tested on Ubuntu 16.04. Note that I had to use exactly the same versions for pytorch (1.1.0) and spconv (1.0) as in https://github.com/skyhehe123/SA-SSD for the code to work.
-*
+
 - Installation:
 ```
 $ pip install opencv-python
