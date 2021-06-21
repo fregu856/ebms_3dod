@@ -271,13 +271,13 @@ def create_groundtruth_database(data_path,
 
 
 if __name__ == '__main__':
-    create_kitti_info_file('/root/project4/3dod/data/KITTI')
-    create_reduced_point_cloud('/root/project4/3dod/data/KITTI')
+    create_kitti_info_file('/root/ebms_3dod/3dod/data/KITTI')
+    create_reduced_point_cloud('/root/ebms_3dod/3dod/data/KITTI')
 
-    create_groundtruth_database(data_path='/root/project4/3dod/data/KITTI', \
-                                info_path='/root/project4/3dod/data/KITTI/kitti_infos_trainval.pkl', \
-                                db_info_save_path='/root/project4/3dod/data/KITTI/kitti_dbinfos_trainval.pkl')
+    create_groundtruth_database(data_path='/root/ebms_3dod/3dod/data/KITTI', \
+                                info_path='/root/ebms_3dod/3dod/data/KITTI/kitti_infos_trainval.pkl', \
+                                db_info_save_path='/root/ebms_3dod/3dod/data/KITTI/kitti_dbinfos_trainval.pkl')
 
-    create_groundtruth_database(data_path='/root/project4/3dod/data/KITTI', \
-                                info_path='/root/project4/3dod/data/KITTI/kitti_infos_train.pkl', \
-                                db_info_save_path='/root/project4/3dod/data/KITTI/kitti_dbinfos_train.pkl')
+    create_groundtruth_database(data_path='/root/ebms_3dod/3dod/data/KITTI', \
+                                info_path='/root/ebms_3dod/3dod/data/KITTI/kitti_infos_train.pkl', \
+                                db_info_save_path='/root/ebms_3dod/3dod/data/KITTI/kitti_dbinfos_train.pkl')

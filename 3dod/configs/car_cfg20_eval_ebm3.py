@@ -77,7 +77,7 @@ test_cfg = dict(
 )
 # dataset settings
 dataset_type = 'KittiLiDAR'
-data_root = '/root/project4/3dod/data/KITTI/'
+data_root = '/root/ebms_3dod/3dod/data/KITTI/'
 img_norm_cfg = dict(
     mean=[123.675, 116.28, 103.53], std=[58.395, 57.12, 57.375], to_rgb=True)
 data = dict(
@@ -179,7 +179,7 @@ total_epochs = 80
 dist_params = dict(backend='nccl')
 log_level = 'INFO'
 # work_dir = '../saved_model_vehicle
-work_dir = '/root/project4/3dod/saved_model_vehicle20'
+work_dir = '/root/ebms_3dod/3dod/saved_model_vehicle20'
 load_from = None
 resume_from = None
 workflow = [('train', 1)]
