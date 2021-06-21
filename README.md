@@ -244,6 +244,8 @@ $ python setup.py build_ext --inplace
 
 - __3dod/viz_video.py__: Code for creating the [Youtube video](https://youtu.be/7JP6V818bh0) with qualitative results.
 
+- Also see [ebms_regression](https://github.com/fregu856/ebms_regression) for an illustrative 1D regression problem.
+
 
 ***
 ***
