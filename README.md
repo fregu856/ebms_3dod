@@ -201,31 +201,23 @@ $ python setup.py build_ext --inplace
 - Create cropped point clouds and sample for data augmentation:
 - - Create the folder ebms_3dod/3dod/data/KITTI/object/training/velodyne_reduced
 - - Create the folder ebms_3dod/3dod/data/KITTI/object/testing/velodyne_reduced
-```
-$ cd ebms_3dod/3dod
-$ python create_data.py
-```
+- - $ cd ebms_3dod/3dod
+- - $ python create_data.py
 *
 *
 *
 *
 - Train model on KITTI train:
-```
-$ cd ebms_3dod/3dod
-$ python train.py configs/car_cfg20.py
-```
+- - $ cd ebms_3dod/3dod
+- - $ python train.py configs/car_cfg20.py
 *
 - Evaluate model on KITTI val:
-```
-$ cd ebms_3dod/3dod
-$ python eval.py configs/car_cfg20_eval_ebm3.py saved_model_vehicle20/checkpoint_epoch_80.pth
-```
+- - $ cd ebms_3dod/3dod
+- - $ python eval.py configs/car_cfg20_eval_ebm3.py saved_model_vehicle20/checkpoint_epoch_80.pth
 *
 - Run model on KITTI test:
-```
-$ cd ebms_3dod/3dod
-$ python eval.py configs/car_cfg20_eval_ebm3_test.py saved_model_vehicle20/checkpoint_epoch_80.pth --out saved_model_vehicle20 (this creates 000000.txt - 007517.txt in ebms_3dod/3dod/saved_model_vehicle20)
-```
+- - $ cd ebms_3dod/3dod
+- - $ python eval.py configs/car_cfg20_eval_ebm3_test.py saved_model_vehicle20/checkpoint_epoch_80.pth --out saved_model_vehicle20 (this creates 000000.txt - 007517.txt in ebms_3dod/3dod/saved_model_vehicle20)
 - - To evaluate on KITTI test:
 - - Download all 7518 files, mark all files and compress to a zip file
 - - Upload the zip file to the KITTI evaluation server
