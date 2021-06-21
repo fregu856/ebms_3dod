@@ -232,7 +232,7 @@ This repository is a work in progress, the code is currently being uploaded (Jun
 - - $ cd ebms_3dod/3dod
 - - $ python eval.py configs/car_cfg20_eval_ebm3.py saved_model_vehicle20/checkpoint_epoch_80.pth
 
-- Evaluate model on KITTI test:
+- Run model on KITTI test:
 - - $ cd ebms_3dod/3dod
 - - $ python eval.py configs/car_cfg20_eval_ebm3_test.py saved_model_vehicle20/checkpoint_epoch_80.pth --out saved_model_vehicle20 (this creates 000000.txt - 007517.txt in ebms_3dod/3dod/saved_model_vehicle20)
 - - To evaluate on KITTI test:
