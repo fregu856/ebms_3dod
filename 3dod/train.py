@@ -83,7 +83,7 @@ def main():
         model = MMDataParallel(model, device_ids=range(cfg.gpus)).cuda()
 
     if cfg.SA_SSD_pretrained:
-        load_params_from_file(model, "/root/project4/3dod/epoch_50.pth")
+        load_params_from_file(model, "/root/ebms_3dod/3dod/epoch_50.pth")
 
     train_dataset = get_dataset(cfg.data.train)
 

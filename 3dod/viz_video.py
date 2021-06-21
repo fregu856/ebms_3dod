@@ -254,7 +254,7 @@ def draw_3d_polys(img, polys):
 for sequence in ["0011"]:
     print (sequence)
 
-    project_dir = "/home/fredrik/project4/3dod/" # NOTE! you'll have to adapt this for your file structure
+    project_dir = "/home/fredrik/ebms_3dod/3dod/" # NOTE! you'll have to adapt this for your file structure
     data_dir = project_dir + "data/KITTI/tracking/testing/"
     img_dir = data_dir + "image_02/" + sequence + "/"
     calib_path = project_dir + "data/KITTI/tracking/testing/calib/" + sequence + ".txt"
@@ -303,7 +303,7 @@ for sequence in ["0011"]:
     class ImgCreatorLiDAR:
         def __init__(self):
             self.counter = 0
-            self.trajectory = open3d.read_pinhole_camera_trajectory("/home/fredrik/project4/3dod/camera_trajectory.json") # NOTE! you'll have to adapt this for your file structure
+            self.trajectory = open3d.read_pinhole_camera_trajectory("/home/fredrik/ebms_3dod/3dod/camera_trajectory.json") # NOTE! you'll have to adapt this for your file structure
 
         def move_forward(self, vis):
             # this function is called within the Visualizer::run() loop.
@@ -422,7 +422,7 @@ for sequence in ["0011"]:
     #     else:
     #         img_id = img_id.lstrip("0")
     #
-    #     with open("/home/fredrik/project4/3dod/preds%s/%s.pkl" % (sequence, img_id), "rb") as file: # NOTE! you'll have to adapt this for your file structure
+    #     with open("/home/fredrik/ebms_3dod/3dod/preds%s/%s.pkl" % (sequence, img_id), "rb") as file: # NOTE! you'll have to adapt this for your file structure
     #         bboxes_numpy = pickle.load(file) # (shape: (num_detections, 7))
     #
     #     bboxes_list = []
@@ -526,7 +526,7 @@ for sequence in ["0011"]:
         else:
             img_id = img_id.lstrip("0")
 
-        with open("/home/fredrik/project4/3dod/preds%s/%s.pkl" % (sequence, img_id), "rb") as file: # NOTE! you'll have to adapt this for your file structure
+        with open("/home/fredrik/ebms_3dod/3dod/preds%s/%s.pkl" % (sequence, img_id), "rb") as file: # NOTE! you'll have to adapt this for your file structure
             bboxes_numpy = pickle.load(file) # (shape: (num_detections, 7))
 
         bboxes_list_img_viz = []
