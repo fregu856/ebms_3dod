@@ -241,12 +241,15 @@ This repository is a work in progress, the code is currently being uploaded (Jun
 
 
 
-
-PRETRAINED MODEL:
+***
+***
+***
+## Pretrained model
 
 - Model trained on KITTI train ($ python train.py configs/car_cfg20.py): https://drive.google.com/file/d/1hWKUZ4rx9h6Med3pI4A4wbHXEOey-8zI/view?usp=sharing
-
+*
 - Evaluate pretrained model on KITTI val:
+- - Download the file checkpoint_epoch_80.pth from above and place in ebms_3dod/3dod/pretrained.
 - - $ cd ebms_3dod/3dod
 - - $ python eval.py configs/car_cfg20_eval_ebm3.py pretrained/checkpoint_epoch_80.pth
 - - Expected output:
@@ -282,10 +285,11 @@ bev  AP:99.41, 96.35, 93.86
 3d   AP:99.39, 96.29, 93.81
 aos  AP:99.32, 95.89, 93.25
 ```
-
+*
 - Run pretrained model on KITTI test:
+- - Download the file checkpoint_epoch_80.pth from above and place in ebms_3dod/3dod/pretrained.
 - - $ cd ebms_3dod/3dod
-- - $ python eval.py configs/car_cfg20_eval_ebm3_test.py pretrained/checkpoint_epoch_80.pth --out pretrained (this creates 000000.txt - 007517.txt in ebms_3dod/3dod/pretrained)
+- - $ python eval.py configs/car_cfg20_eval_ebm3_test.py pretrained/checkpoint_epoch_80.pth --out pretrained _(this creates 000000.txt - 007517.txt in ebms_3dod/3dod/pretrained)_
 - - Download all 7518 files, mark all files and compress to a zip file
 - - Upload the zip file to the KITTI evaluation server
 - - Expexted output:
