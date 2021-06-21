@@ -217,7 +217,7 @@ $ python setup.py build_ext --inplace
 *
 - Run model on KITTI test:
 - - $ cd ebms_3dod/3dod
-- - $ python eval.py configs/car_cfg20_eval_ebm3_test.py saved_model_vehicle20/checkpoint_epoch_80.pth --out saved_model_vehicle20 (this creates 000000.txt - 007517.txt in ebms_3dod/3dod/saved_model_vehicle20)
+- - $ python eval.py configs/car_cfg20_eval_ebm3_test.py saved_model_vehicle20/checkpoint_epoch_80.pth --out saved_model_vehicle20 _(this creates 000000.txt - 007517.txt in ebms_3dod/3dod/saved_model_vehicle20)_
 - - To evaluate on KITTI test:
 - - Download all 7518 files, mark all files and compress to a zip file
 - - Upload the zip file to the KITTI evaluation server
